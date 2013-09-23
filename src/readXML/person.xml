@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book>
+	<person>
+		<first>wang</first>
+		<last>laohu</last>
+		<age>25</age>
+		<version>中国邮电出版社</version>
+	</person>
+	<person>
+		<first>li</first>
+		<last>junjia</last>
+		<age>24</age>
+		<version>清华大学出版社</version>
+	</person>
+</book>  
