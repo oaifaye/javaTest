@@ -24,9 +24,6 @@ public class Setter extends Thread {
 	public void run() {
 		while (true) {
 			en.set(mess1,mess2);
-//			if(en.get().equals(mess)){
-//				System.out.println(en.get()+".."+mess);
-//			}
 		}
 		
 	}
