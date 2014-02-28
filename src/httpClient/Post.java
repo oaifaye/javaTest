@@ -25,23 +25,21 @@ import org.apache.http.util.EntityUtils;
 public class Post {
 	public static void main(String[] args) {
 		Map<String , String> params = new HashMap<String , String>();
-		params.put("pageLoginuser.lucode", "t11");
-		params.put("pageLoginuser.lupass", "");
-		params.put("pageLoginuser.userPermission.icode", "02");
-		params.put("pageLoginuser.luname", "12");
-		params.put("pageLoginuser.department.icode", "201203200001");
-		params.put("pageLoginuser.principal", "1");
-		params.put("pageLoginuser.contact", "1");
-		params.put("pageLoginuser.reportSector", "1");
-		params.put("pageLoginuser.reportPerson", "1");
-		params.put("pageLoginuser.principal", "01");
-		params.put("ptCodes", "201206120037");
-		params.put("pageLoginuser.status", "0");
-		doPost("http://localhost:8888/jwsz/addUser.action;jsessionid=11E0C618800A5C6230BD43CA323EF656",params);
-	
-//		params.put("lucode", "ct");
-//		params.put("lupass", "111111");
-//		getPhoneAdress("http://localhost:8888/jwsz/login.action",params);
+//		params.put("userName", "3");
+//		params.put("password", "123456");
+		
+		params.put("employee_Sex", "男");
+		params.put("dept_ID", "3");
+		params.put("roleid", "2");
+		params.put("joinday", "2013-11-13");
+		params.put("pageLoginuser.reportPerson", "2013-11-13");
+		for(int i = 100 ; i<101;i++){
+//			System.out.println("第"+i+"次-----------------------------------------------------------------------------");
+			params.put("userName", String.valueOf(i));
+			params.put("employee_Name", String.valueOf(i));
+			doPost("http://127.0.0.1:8888/TFKJ/employeeEdit.do;jsessionid=4EE95DE464449E2DF70005905A08F32C?act=insert",params);
+		}
+//		doPost("http://127.0.0.1:8888/TFKJ/login.do?act=login",params);
 	}
 	
 	public static void createClient(String url) {
@@ -97,7 +95,7 @@ public class Post {
 			}
 
 			// 设置字符集
-			HttpEntity httpentity = new UrlEncodedFormEntity(parameters,"utf-8");
+			HttpEntity httpentity = new UrlEncodedFormEntity(parameters,"gbk");
 
 			httppost.setEntity(httpentity);
 			

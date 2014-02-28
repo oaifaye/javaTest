@@ -12,5 +12,26 @@ public class Test1 {
 		System.out.println(EntityClass instanceof Class);
 		System.out.println(entity instanceof Entity2);
 		
+		int a =2;
+		int b =1;
+		for(int i = 0 ; i<5 ; i++){
+			//System.out.println("1111"+(++b>2));
+			if((++a>2)&&(++b>2)){
+				//a++;
+				System.out.println(a++);
+			}
+			
+		}
+		System.out.println(a+".."+b);
+		
+		//128的问题
+		Integer i = -128;
+		Integer x = -128;
+		System.out.println(i == x); //true
+
+		Integer i1 = 128;
+		Integer x1 = 128;
+		System.out.println(i1 == x1); //false
+		
 	}
 }

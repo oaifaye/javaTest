@@ -20,5 +20,6 @@ public class Test1 extends Thread {
 		Test1 test2= new Test1("B");
 		test1.start();
 		test2.start();
+		getAllStackTraces();
 	}
 }
